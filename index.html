@@ -4,9 +4,475 @@
     <meta charset="UTF-8">
     <title>UAT</title>
 </head>
+
+<style>
+    body {
+        margin: 0;
+    }
+
+    #innpakning {
+        width: 100%;
+        height: 2578px;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #meny {
+        width: 100%;
+        height: 80px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: #ffffff;
+        position: fixed;
+        box-shadow: 5px 5px 20px rgba(26, 25, 25, 0.6);
+        z-index: 5;
+        top: 0;
+    }
+
+    #logo {
+        background-image: url("logo.png");
+        background-size: cover;
+        width: 110px;
+        height: 110px;
+        margin-top: 40px;
+    }
+
+    .innpakningMenysider {
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        width: 400px;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 70px;
+        margin-right: 70px;
+        color: #423a37;
+        font-size: 18px;
+    }
+
+    .menyside:hover {
+        cursor: pointer;
+        color: #ae3b55;
+    }
+
+    button {
+        position: absolute;
+        font-size: 18px;
+        color: white;
+        background-color: #423a37;
+        border-radius: 20px;
+        width: 80px;
+        height: 32px;
+        border: none;
+        right: 20px;
+    }
+
+    button:hover {
+        cursor: pointer;
+        background-color: #6b6a69;
+    }
+
+    #darkOverlay {
+        position: absolute;
+        width: 100%;
+        height: 812px;
+        background-color: rgba(0,0,0,0.61);
+        z-index: 2;
+    }
+
+    #overlay {
+        position: absolute;
+        width: 100%;
+        height: 812px;
+        background-image: url("hero_onlyPeople.png");
+        background-size: cover;
+        z-index: 3;
+        margin-top: 80px;
+    }
+    #hero {
+        width: 100%;
+        height: 812px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 80px;
+        background-image: url("uat_hero.jpg"); /* https://www.facebook.com/UATedu/photos/10156903082026312 */
+        background-size: cover;
+        align-items: center;
+    }
+
+    .tekst {
+        font-family: Arial, sans-serif;
+    }
+
+    .overskriftHero {
+        color: white;
+        text-align: center;
+        z-index: 3;
+    }
+
+    #weAreUAT {
+        font-size: 30px;
+        margin-top: 100px;
+        font-weight: normal;
+    }
+
+    #L_E_I {
+        font-size: 55px;
+        margin-top: -8px;
+    }
+
+    #innpakningDel2 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 450px;
+    }
+
+    .innpakningOverskrifter {
+        background-color: white;
+        width: 100%;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .overskrift {
+        margin-left: 20px;
+        color: #423a37;
+    }
+
+    #findYourFit {
+        font-size: 55px;
+    }
+
+    #explore {
+        font-size: 30px;
+        font-weight: normal;
+        margin-top: -20px;
+    }
+
+    #innpakningBokser {
+        background-color: #928686;
+        width: 100%;
+        height: 248px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .boks {
+        height: 248px;
+        width: 248px;
+        background-color: #f8f8f8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mørkBoks {
+        background-color: #f0f0f0;
+    }
+
+    .boksBilde {
+        width: 110px;
+        height: 130px;
+    }
+
+    .boksBilde:hover {
+        width: 120px;
+        height: 140px;
+        cursor: pointer;
+    }
+
+    #GS {
+        width: 100px;
+    }
+
+    #GS:hover {
+        width: 110px;
+    }
+
+    #BI {
+        width: 120px;
+    }
+
+    #BI:hover {
+        width: 130px;
+    }
+
+    #SE {
+        width: 125px;
+    }
+
+    #SE:hover {
+        width: 135px;
+    }
+
+    #DA {
+        width: 100px;
+    }
+
+    #DA:hover {
+        width: 110px;
+    }
+
+    #CS {
+        width: 120px;
+    }
+
+    #CS:hover {
+        width: 130px;
+    }
+
+    #innpakningDel3 {
+        width: 100%;
+        height: 700px;
+        display: flex;
+        flex-direction: column;
+        background-color: aliceblue;
+        margin-top: 100px;
+    }
+
+    #changing {
+        font-size: 55px;
+        margin-top: -20px;
+        margin-left: 0;
+    }
+
+    #shaping {
+        font-size: 30px;
+        font-weight: normal;
+        margin-left: 0;
+    }
+
+    #overskrifterDel3 {
+        align-items: center;
+    }
+
+    #innpakningBilder {
+        display: flex;
+        flex-direction: row;
+        height: 400px;
+        width: 100%;
+    }
+
+    .bilde {
+        height: 496px;
+        width: 496px;
+    }
+
+    #innpakningDel4 {
+        width: 100%;
+        height: 220px;
+        display: flex;
+        flex-direction: row;
+        background-color: #efe9f5;
+        margin-top: -4px;
+    }
+
+    .infoboks {
+        width: 33.3333%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .infoboks:hover {
+        cursor: pointer;
+    }
+
+    #announcements {
+        background-color: #f7f7f7;
+        color: #423a37;
+    }
+
+    #announcements:hover {
+        background-color: #ececec;
+    }
+
+    #contact {
+        background-color: #9fc75b;
+        color: white;
+    }
+
+    #contact:hover {
+        background-color: #97be57;
+    }
+
+    #newsEvents {
+        background-color: #aa0e28;
+        color: white;
+    }
+
+    #newsEvents:hover {
+        background-color: #9b0d25;
+    }
+
+    .fargeBoksTekst {
+        margin-left: 20px;
+    }
+
+    #updates {
+        margin-top: -8px;
+    }
+
+    #rightPlace {
+        margin-top: -8px;
+    }
+
+    .infoTekst {
+        line-height: 1.5;
+        width: 450px;
+    }
+
+    #tlfnr {
+        font-size: 30px;
+    }
+
+    #innpakningfollowUs {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 90px;
+        margin-bottom: 10px;
+    }
+
+    #innpakningSosialt {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    #followUs {
+        font-size: 25px;
+    }
+
+    .sosialtIkon {
+        height: 90%;
+    }
+
+    .sosialtIkon:hover {
+        cursor: pointer;
+        height: 100%;
+        margin-right: -6px;
+    }
+
+
+</style>
+
 <body>
+<div id="innpakning">
+    <div id="meny">
+        <div class="innpakningMenysider">
+            <span class="menyside tekst">Academics</span>
+            <span class="menyside tekst">Admissions</span>
+            <span class="menyside tekst">Degrees</span>
+        </div>
+        <div id="logo"></div>
+        <div class="innpakningMenysider">
+            <span class="menyside tekst">About UAT</span>
+            <span class="menyside tekst">News & events</span>
+            <span class="menyside tekst">Apply</span>
+            <button type="button" class="tekst">Login</button>
+        </div>
+    </div>
+
+    <div id="darkOverlay"></div>
+    <div id="overlay"></div>
+    <div id="hero">
+        <h2 id="weAreUAT" class="tekst overskriftHero"><em>We are uat</em></h2>
+        <h1 id="L_E_I" class="tekst overskriftHero">LEARN. <br> EXPERIENCE. <br> INNOVATE.</h1>
+    </div>
+
+    <div id="innpakningDel2">
+        <div class="innpakningOverskrifter">
+            <h1 id="findYourFit" class="tekst overskrift">FIND YOUR FIT</h1>
+            <h2 id="explore" class="tekst overskrift"><em>Explore our degrees</em></h2>
+        </div>
+        <div id="innpakningBokser">
+            <div class="boks">
+                <img id="GS" class="boksBilde" src="gameStudies.PNG">
+            </div>
+            <div class="boks mørkBoks">
+                <img class="boksBilde" src="cyberSecurity.PNG">
+            </div>
+            <div class="boks">
+                <img id="BI" class="boksBilde" src="businessInnovation.PNG">
+            </div>
+            <div class="boks mørkBoks">
+                <img id="SE" class="boksBilde" src="softwareEngineering.PNG">
+            </div>
+            <div class="boks">
+                <img id="DA" class="boksBilde" src="digitalArts.PNG">
+            </div>
+            <div class="boks mørkBoks">
+                <img id="CS" class="boksBilde" src="creationSimulation.PNG">
+            </div>
+        </div>
+    </div>
+
+    <div id="innpakningDel3">
+        <div id="overskrifterDel3" class="innpakningOverskrifter">
+            <h2 id="shaping" class="tekst overskrift">Shaping tomorrow.</h2>
+            <h1 id="changing" class="tekst overskrift">CHANGING TODAY.</h1>
+        </div>
+        <div id="innpakningBilder">
+            <img class="bilde" src="VR.jpg">
+            <img class="bilde" src="robot.jpg">
+            <img class="bilde" src="litenGuttPC.jpg">
+        </div>
+    </div>
+
+    <div id="innpakningDel4">
+        <div id="announcements" class="infoboks">
+            <h3 class="tekst fargeBoksTekst">ANNOUNCEMENTS</h3>
+            <h4 id="updates" class="tekst fargeBoksTekst">Covid-19 updates</h4>
+            <span class="infoTekst tekst fargeBoksTekst">
+                One of our students has tested positive for covid-19, which is why we are closing the UAT campus.
+                Click to read more about what this means.
+            </span>
+        </div>
+        <div id="contact" class="infoboks">
+            <h3 class="tekst fargeBoksTekst">WANT TO GET IN TOUCH?</h3>
+            <h4 id="tlfnr" class="tekst fargeBoksTekst">(800) 658-5744</h4>
+        </div>
+        <div id="newsEvents" class="infoboks">
+            <h3 class="tekst fargeBoksTekst">NEWS & EVENTS</h3>
+            <h4 id="rightPlace" class="tekst fargeBoksTekst">Finding the right place</h4>
+            <span class="infoTekst tekst fargeBoksTekst">
+                Will UAT be a good fit for your child?
+            </span>
+        </div>
+    </div>
+
+    <div id="innpakningfollowUs">
+        <h3 id="followUs" class="tekst">FOLLOW US</h3>
+    </div>
+
+    <div id="innpakningSosialt">
+        <img id="tiktok" class="sosialtIkon" src="tiktok.PNG">
+        <img id="toPrikker" class="sosialtIkon" src="toPrikker.PNG">
+        <img id="reddit" class="sosialtIkon" src="reddit.PNG">
+        <img id="discord" class="sosialtIkon" src="discord.PNG">
+        <img id="snap" class="sosialtIkon" src="snap.PNG">
+        <img id="twitch" class="sosialtIkon" src="twitch.PNG">
+        <img id="yt" class="sosialtIkon" src="yt.PNG">
+        <img id="in" class="sosialtIkon" src="in.PNG">
+        <img id="insta" class="sosialtIkon" src="insta.PNG">
+        <img id="twitter" class="sosialtIkon" src="twitter.PNG">
+        <img id="fb" class="sosialtIkon" src="fb.PNG">
+    </div>
+
+</div>
 
 </body>
 
-<h1></h1>
 </html>
