@@ -50,6 +50,10 @@
         justify-content: space-between;
         margin-left: 70px;
         margin-right: 70px;
+
+    }
+
+    .menyside {
         color: #423a37;
         font-size: 18px;
     }
@@ -75,6 +79,11 @@
         cursor: pointer;
         background-color: #6b6a69;
     }
+
+    a {
+        text-decoration: none;
+    }
+
 
     #darkOverlay {
         position: absolute;
@@ -277,7 +286,7 @@
 
     .infoboks {
         width: 320px;
-        height: 100%;
+        height: 210px;
         display: flex;
         flex-direction: column;
     }
@@ -375,15 +384,19 @@
 <div id="innpakning">
     <div id="meny">
         <div class="innpakningMenysider">
-            <span class="menyside tekst">Academics</span>
-            <span class="menyside tekst">Admissions</span>
-            <span class="menyside tekst">Degrees</span>
+            <span><a href="somewhere.html" class="menyside tekst">Academics</a></span>
+            <span><a href="somewhere.html" class="menyside tekst">Admissions</a></span>
+            <span><a href="somewhere.html" class="menyside tekst">Degrees</a></span>
         </div>
-        <div id="logo"></div>
+
+        <a href="index.html" id="linkLogo">
+            <img src="logo.png" alt="" id="logo">
+        </a>
+
         <div class="innpakningMenysider">
-            <span class="menyside tekst">About UAT</span>
-            <span class="menyside tekst">News & events</span>
-            <span class="menyside tekst">Apply</span>
+            <span><a href="about.html" class="menyside tekst">About UAT</a></span>
+            <span><a href="somewhere.html" class="menyside tekst">News & events</a></span>
+            <span><a href="somewhere.html" class="menyside tekst">Apply</a></span>
             <button type="button" class="tekst">Login</button>
         </div>
     </div>
@@ -401,9 +414,9 @@
             <h2 id="explore" class="tekst overskrift"><em>Explore our degrees</em></h2>
         </div>
         <div id="innpakningBokser">
-            <div class="boks">
+            <a href="somewhere.html"><div class="boks">
                 <img id="GS" class="boksBilde" src="gameStudies.PNG"> <!-- All degree-images are downloaded from the uat website https://www.uat.edu/ -->
-            </div>
+            </div></a>
             <div class="boks mørkBoks">
                 <img class="boksBilde" src="cyberSecurity.PNG">
             </div>
@@ -435,25 +448,25 @@
     </div>
 
     <div id="innpakningDel4">
-        <div id="announcements" class="infoboks">
+        <a href="somewhere.html"><div id="announcements" class="infoboks">
             <h3 class="tekst fargeBoksTekst">ANNOUNCEMENTS</h3>
             <h4 id="updates" class="tekst fargeBoksTekst">Covid-19 updates</h4>
             <span class="infoTekst tekst fargeBoksTekst">
                 One of our students has tested positive for covid-19, which is why we are closing the UAT campus.
                 Click to read more about what this means.
             </span>
-        </div>
-        <div id="contact" class="infoboks">
+        </div></a>
+        <a href="somewhere.html"><div id="contact" class="infoboks">
             <h3 class="tekst fargeBoksTekst">WANT TO GET IN TOUCH?</h3>
             <h4 id="tlfnr" class="tekst fargeBoksTekst">(800) 658-5744</h4>
-        </div>
-        <div id="newsEvents" class="infoboks">
+        </div></a>
+        <a href="somewhere.html"><div id="newsEvents" class="infoboks">
             <h3 class="tekst fargeBoksTekst">NEWS & EVENTS</h3>
             <h4 id="rightPlace" class="tekst fargeBoksTekst">Finding the right place</h4>
             <span class="infoTekst tekst fargeBoksTekst">
                 Will UAT be a good fit for your child?
             </span>
-        </div>
+        </div></a>
     </div>
 
     <div id="innpakningfollowUs">

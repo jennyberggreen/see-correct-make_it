@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About UAT</title>
+</head>
+<style>
+    body {
+        margin: 0;
+    }
+
+    #innpakning {
+        width: 100%;
+        height: 1000px;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #meny {
+        width: 100%;
+        height: 80px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: #ffffff;
+        position: fixed;
+        box-shadow: 5px 5px 20px rgba(26, 25, 25, 0.6);
+        z-index: 5;
+        top: 0;
+    }
+
+    #linkLogo { /* https://www.uat.edu/see-technology-college */
+        margin-top: 40px;
+    }
+
+    #logo {
+        width: 110px;
+        height: 110px;
+    }
+
+    .innpakningMenysider {
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        width: 400px;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 70px;
+        margin-right: 70px;
+
+    }
+
+    .menyside {
+        color: #423a37;
+        font-size: 18px;
+    }
+
+    .menyside:hover {
+        cursor: pointer;
+        color: #ae3b55;
+    }
+
+    button {
+        position: absolute;
+        font-size: 18px;
+        color: white;
+        background-color: #423a37;
+        border-radius: 20px;
+        width: 80px;
+        height: 32px;
+        border: none;
+        right: 20px;
+    }
+
+    button:hover {
+        cursor: pointer;
+        background-color: #6b6a69;
+    }
+
+    .tekst {
+        font-family: Arial, sans-serif;
+    }
+
+    #main {
+        height: 810px;
+        width: 100%;
+        margin-top: 80px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .active {
+        color: #ae3b55;
+    }
+
+
+</style>
+
+<body>
+<div id="innpakning">
+    <div id="meny">
+        <div class="innpakningMenysider">
+            <span><a href="somewhere.html" class="menyside tekst">Academics</a></span>
+            <span><a href="somewhere.html" class="menyside tekst">Admissions</a></span>
+            <span><a href="somewhere.html" class="menyside tekst">Degrees</a></span>
+        </div>
+
+        <a href="index.html" id="linkLogo">
+            <img src="logo.png" alt="" id="logo">
+        </a>
+
+        <div class="innpakningMenysider">
+            <span><a href="about.html" class="menyside tekst active">About UAT</a></span>
+            <span><a href="somewhere.html" class="menyside tekst">News & events</a></span>
+            <span><a href="somewhere.html" class="menyside tekst">Apply</a></span>
+            <button type="button" class="tekst">Login</button>
+        </div>
+    </div>
+
+    <div id="main">
+        <h1>About UAT</h1>
+    </div>
+
+</div>
+
+</body>
+
+</html>
