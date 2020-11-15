@@ -9,6 +9,10 @@
         margin: 0;
     }
 
+    h1 {
+        margin-top: 200px;
+    }
+
     #innpakning {
         width: 100%;
         height: 1000px;
@@ -20,11 +24,10 @@
 
     #meny {
         width: 100%;
-        height: 80px;
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         background-color: #ffffff;
         position: fixed;
         box-shadow: 5px 5px 20px rgba(26, 25, 25, 0.6);
@@ -32,25 +35,22 @@
         top: 0;
     }
 
-    #linkLogo { /* https://www.uat.edu/see-technology-college */
-        margin-top: 40px;
-    }
-
     #logo {
-        width: 110px;
-        height: 110px;
+        background-image: url("logo.png"); /* https://www.uat.edu/see-technology-college */
+        background-size: cover;
+        width: 70px;
+        height: 70px;
+        margin-left: 20px;
     }
 
     .innpakningMenysider {
         display: flex;
         flex-direction: row;
-        height: 100%;
-        width: 400px;
+        height: 50px;
+        width: 1000px;
         align-items: center;
         justify-content: space-between;
-        margin-left: 70px;
-        margin-right: 70px;
-
+        margin-right: 20px;
     }
 
     .menyside {
@@ -64,14 +64,12 @@
     }
 
     button {
-        position: absolute;
         font-size: 18px;
         background-color: #423a37;
         border-radius: 20px;
         width: 80px;
         height: 32px;
         border: none;
-        right: 20px;
     }
 
     a {
@@ -105,29 +103,106 @@
         color: #ae3b55;
     }
 
+    /* ------------------------- responsive ----------------------------- */
+
+
+    @media only screen and (max-width: 1300px) {
+        #innpakning {
+            height: 2500px;
+        }
+
+        #meny {
+            flex-direction: column;
+        }
+
+    }
+
+    @media only screen and (max-width: 1050px) {
+        #innpakning {
+            height: 3600px;
+        }
+
+        #meny {
+            flex-direction: column;
+        }
+
+        .innpakningMenysider {
+            width: 900px;
+        }
+
+        .menyside {
+            font-size: 15px;
+        }
+
+    }
+
+    @media only screen and (max-width: 950px) {
+        #innpakning {
+            height: 4130px;
+        }
+
+        #meny {
+            flex-direction: column;
+        }
+
+        .innpakningMenysider {
+            width: 700px;
+        }
+    }
+
+    @media only screen and (max-width: 800px) {
+        #innpakning {
+            height: 3700px;
+        }
+
+        #meny {
+            flex-direction: column;
+        }
+
+    }
+
+    @media only screen and (max-width: 730px) {
+        #innpakning {
+        }
+
+        #meny {
+            flex-direction: column;
+        }
+
+        .innpakningMenysider {
+            width: 600px;
+        }
+
+        button {
+            font-size: 15px;
+            width: 70px;
+            height: 25px;
+        }
+
+    }
+
 
 </style>
 
 <body>
 <div id="innpakning">
     <div id="meny">
-        <div class="innpakningMenysider">
-            <span><a href="academics.html" class="menyside tekst">Academics</a></span>
-            <span><a href="admissions.html" class="menyside tekst active">Admissions</a></span>
-            <span><a href="degrees.html" class="menyside tekst">Degrees</a></span>
-        </div>
 
         <a href="index.html" id="linkLogo">
             <img src="logo.png" alt="" id="logo">
         </a>
 
         <div class="innpakningMenysider">
+            <span><a href="academics.html" class="menyside tekst">Academics</a></span>
+            <span><a href="admissions.html" class="menyside tekst active">Admissions</a></span>
+            <span><a href="degrees.html" class="menyside tekst">Degrees</a></span>
             <span><a href="about.html" class="menyside tekst">About UAT</a></span>
             <span><a href="news.html" class="menyside tekst">News & events</a></span>
             <span><a href="apply.html" class="menyside tekst">Apply</a></span>
             <button type="button"><a href="login.html" class="tekst" id="knapp">Login</a></button>
         </div>
     </div>
+
 
     <div id="main">
         <h1>Admissions</h1>

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>UAT</title>
 </head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
     body {
@@ -21,11 +22,10 @@
 
     #meny {
         width: 100%;
-        height: 80px;
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         background-color: #ffffff;
         position: fixed;
         box-shadow: 5px 5px 20px rgba(26, 25, 25, 0.6);
@@ -36,21 +36,19 @@
     #logo {
         background-image: url("logo.png"); /* https://www.uat.edu/see-technology-college */
         background-size: cover;
-        width: 110px;
-        height: 110px;
-        margin-top: 40px;
+        width: 70px;
+        height: 70px;
+        margin-left: 20px;
     }
 
     .innpakningMenysider {
         display: flex;
         flex-direction: row;
-        height: 100%;
-        width: 400px;
+        height: 50px;
+        width: 1000px;
         align-items: center;
         justify-content: space-between;
-        margin-left: 70px;
-        margin-right: 70px;
-
+        margin-right: 20px;
     }
 
     .menyside {
@@ -64,14 +62,12 @@
     }
 
     button {
-        position: absolute;
         font-size: 18px;
         background-color: #423a37;
         border-radius: 20px;
         width: 80px;
         height: 32px;
         border: none;
-        right: 20px;
     }
 
     button:hover {
@@ -85,34 +81,18 @@
 
     a {
         text-decoration: none;
+
     }
 
-
-    #darkOverlay {
-        position: absolute;
-        width: 100%;
-        height: 812px;
-        background-color: rgba(0,0,0,0.61);
-        z-index: 2;
-    }
-
-    #overlay {
-        position: absolute;
-        width: 100%;
-        height: 812px;
-        background-image: url("hero_onlyPeople.png");
-        background-size: cover;
-        z-index: 3;
-        margin-top: 80px;
-    }
     #hero {
         width: 100%;
         height: 812px;
         display: flex;
         flex-direction: column;
-        margin-top: 80px;
-        background-image: url("uat_hero.jpg"); /* https://www.facebook.com/UATedu/photos/10156903082026312 */
+        margin-top: 70px;
+        background-image: url("hero_frontPage.PNG"); /* https://www.facebook.com/UATedu/photos/10156903082026312 */
         background-size: cover;
+        background-position: bottom;
         align-items: center;
     }
 
@@ -133,8 +113,11 @@
     }
 
     #L_E_I {
-        font-size: 55px;
         margin-top: -3px;
+    }
+
+    .stor {
+        font-size: 55px;
     }
 
     #innpakningDel2 {
@@ -158,9 +141,6 @@
         color: #423a37;
     }
 
-    #findYourFit {
-        font-size: 55px;
-    }
 
     #explore {
         font-size: 30px;
@@ -169,11 +149,17 @@
     }
 
     #innpakningBokser {
-        background-color: #928686;
         width: 100%;
         height: 248px;
         display: flex;
         flex-direction: row;
+    }
+
+    .rad {
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        width: 50%;
     }
 
     .boks {
@@ -245,12 +231,10 @@
         height: 700px;
         display: flex;
         flex-direction: column;
-        background-color: aliceblue;
         margin-top: 100px;
     }
 
     #changing {
-        font-size: 55px;
         margin-top: -20px;
         margin-left: 0;
     }
@@ -268,13 +252,13 @@
     #innpakningBilder {
         display: flex;
         flex-direction: row;
-        height: 400px;
+        height: 450px;
         width: 100%;
     }
 
     .bilde {
-        height: 496px;
-        width: 496px;
+        height: auto;
+        width: 33.3%;
     }
 
     #innpakningDel4 {
@@ -380,23 +364,225 @@
         margin-right: -6px;
     }
 
+     /* ------------------------- responsive ----------------------------- */
+
+    @media only screen and (max-width: 1450px) {
+        #meny {
+        }
+
+        #innpakningBilder {
+            height: 420px;
+        }
+    }
+
+
+    @media only screen and (max-width: 1300px) {
+        #innpakning {
+            height: 2500px;
+        }
+
+        #meny {
+            flex-direction: column;
+        }
+
+        #innpakningBilder {
+            height: 400px;
+        }
+    }
+
+    @media only screen and (max-width: 1050px) {
+        #innpakning {
+            height: 3600px;
+        }
+
+        #meny {
+            flex-direction: column;
+        }
+
+        .innpakningMenysider {
+            width: 900px;
+        }
+
+        .menyside {
+            font-size: 15px;
+        }
+
+        #innpakningBokser {
+            flex-direction: column;
+            height: 490px;
+        }
+
+        .rad {
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #innpakningDel3 {
+            margin-top: 300px;
+            height: 2700px;
+        }
+
+        #innpakningBilder {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .bilde {
+            width: 500px;
+        }
+
+        #innpakningDel4 {
+        }
+
+        .infoboks {
+            width: 280px;
+            height: 230px;
+        }
+
+        .fargeBoksTekst {
+            width: 90%;
+        }
+    }
+
+    @media only screen and (max-width: 950px) {
+        #innpakning {
+            height: 4130px;
+        }
+
+        #meny {
+            flex-direction: column;
+        }
+
+        .innpakningMenysider {
+            width: 700px;
+        }
+
+        #innpakningDel3 {
+            height: 1700px;
+        }
+
+        #innpakningDel4 {
+            flex-direction: column;
+            width: 90%;
+            margin-top: 250px;
+        }
+
+        .infoboks {
+            width: 500px;
+            height: 180px;
+        }
+
+        #innpakningfollowUs {
+            margin-top: 250px;
+        }
+
+        #innpakningSosialt {
+            height: 40px;
+        }
+    }
+
+    @media only screen and (max-width: 800px) {
+        #innpakning {
+            height: 3700px;
+        }
+
+        #meny {
+            flex-direction: column;
+        }
+
+        #innpakningBokser {
+            height: 400px;
+        }
+
+        .boks {
+            width: 200px;
+            height: 200px;
+        }
+
+        #innpakningDel3 {
+            margin-top: 200px;
+            height: 1400px;
+        }
+
+        .bilde {
+            width: 400px;
+        }
+    }
+
+    @media only screen and (max-width: 730px) {
+        #innpakning {
+        }
+
+        #meny {
+            flex-direction: column;
+        }
+
+        .innpakningMenysider {
+            width: 600px;
+        }
+
+        button {
+            font-size: 15px;
+            width: 70px;
+            height: 25px;
+        }
+
+    }
+
+    @media only screen and (max-width: 650px) {
+        #meny {
+        }
+
+        .innpakningMenysider {
+            width: 500px;
+        }
+
+        .menyside {
+            font-size: 12px;
+        }
+
+        button {
+            font-size: 12px;
+            width: 60px;
+            height: 22px;
+        }
+
+    }
+
+    @media only screen and (max-width: 600px) {
+        #meny {
+        }
+
+        #innpakningBokser {
+            height: 360px;
+        }
+
+        .boks {
+            width: 180px;
+            height: 180px;
+        }
+
+        .stor {
+            font-size: 50px;
+        }
+    }
+
 
 </style>
 
 <body>
 <div id="innpakning">
     <div id="meny">
-        <div class="innpakningMenysider">
-            <span><a href="academics.html" class="menyside tekst">Academics</a></span>
-            <span><a href="admissions.html" class="menyside tekst">Admissions</a></span>
-            <span><a href="degrees.html" class="menyside tekst">Degrees</a></span>
-        </div>
 
         <a href="index.html" id="linkLogo">
             <img src="logo.png" alt="" id="logo">
         </a>
 
         <div class="innpakningMenysider">
+            <span><a href="academics.html" class="menyside tekst">Academics</a></span>
+            <span><a href="admissions.html" class="menyside tekst">Admissions</a></span>
+            <span><a href="degrees.html" class="menyside tekst">Degrees</a></span>
             <span><a href="about.html" class="menyside tekst">About UAT</a></span>
             <span><a href="news.html" class="menyside tekst">News & events</a></span>
             <span><a href="apply.html" class="menyside tekst">Apply</a></span>
@@ -404,44 +590,49 @@
         </div>
     </div>
 
-    <div id="darkOverlay"></div>
-    <div id="overlay"></div>
+
     <div id="hero">
         <h2 id="weAreUAT" class="tekst overskriftHero"><em>We are University of Advancing Technology</em></h2>
-        <h1 id="L_E_I" class="tekst overskriftHero">LEARN. <br> EXPERIENCE. <br> INNOVATE.</h1>
+        <h1 id="L_E_I" class="tekst overskriftHero stor">LEARN. <br> EXPERIENCE. <br> INNOVATE.</h1>
     </div>
 
     <div id="innpakningDel2">
         <div class="innpakningOverskrifter">
-            <h1 id="findYourFit" class="tekst overskrift">FIND YOUR FIT</h1>
+            <h1 id="findYourFit" class="tekst overskrift stor">FIND YOUR FIT</h1>
             <h2 id="explore" class="tekst overskrift"><em>Explore our degrees</em></h2>
         </div>
         <div id="innpakningBokser">
-            <a href="somewhere.html"><div class="boks">
-                <img id="GS" class="boksBilde" src="gameStudies.PNG"> <!-- All degree-images are downloaded from the uat website https://www.uat.edu/ -->
-            </div></a>
-            <div class="boks mørkBoks">
-                <img class="boksBilde" src="cyberSecurity.PNG">
+            <div class="rad" id="rad1">
+                <a href="somewhere.html"><div class="boks">
+                    <img id="GS" class="boksBilde" src="gameStudies.PNG"> <!-- All degree-images are downloaded from the uat website https://www.uat.edu/ -->
+                </div></a>
+                <div class="boks mørkBoks">
+                    <img class="boksBilde" src="cyberSecurity.PNG">
+                </div>
+                <div class="boks">
+                    <img id="BI" class="boksBilde" src="businessInnovation.PNG">
+                </div>
             </div>
-            <div class="boks">
-                <img id="BI" class="boksBilde" src="businessInnovation.PNG">
+            <div class="rad" id="rad2">
+                <div class="boks mørkBoks">
+                    <img id="SE" class="boksBilde" src="softwareEngineering.PNG">
+                </div>
+                <div class="boks">
+                    <img id="DA" class="boksBilde" src="digitalArts.PNG">
+                </div>
+                <div class="boks mørkBoks">
+                    <img id="CS" class="boksBilde" src="creationSimulation.PNG">
+                </div>
             </div>
-            <div class="boks mørkBoks">
-                <img id="SE" class="boksBilde" src="softwareEngineering.PNG">
-            </div>
-            <div class="boks">
-                <img id="DA" class="boksBilde" src="digitalArts.PNG">
-            </div>
-            <div class="boks mørkBoks">
-                <img id="CS" class="boksBilde" src="creationSimulation.PNG">
-            </div>
+
+
         </div>
     </div>
 
     <div id="innpakningDel3">
         <div id="overskrifterDel3" class="innpakningOverskrifter">
             <h2 id="shaping" class="tekst overskrift">Shaping tomorrow.</h2>
-            <h1 id="changing" class="tekst overskrift">CHANGING TODAY.</h1>
+            <h1 id="changing" class="tekst overskrift stor">CHANGING TODAY.</h1>
         </div>
         <div id="innpakningBilder">
             <img class="bilde" src="VR.jpg"> <!-- https://www.facebook.com/UATedu/photos/10157419908841312 -->
